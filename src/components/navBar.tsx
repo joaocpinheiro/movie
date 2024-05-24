@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { FormEvent } from 'react'
+import { MobNav } from './mobNav'
 
 export function NavBar() {
   const router = useRouter()
@@ -22,7 +23,7 @@ export function NavBar() {
           <h2 className="text-[30px]">Movieverse</h2>
         </Link>
 
-        <form className="space-x-4" onSubmit={handleSearch}>
+        <form className="space-x-4 hidden md:block" onSubmit={handleSearch}>
           <input
             placeholder="Buscar Filme..."
             id="q"
@@ -34,6 +35,7 @@ export function NavBar() {
             Buscar
           </button>
         </form>
+        <MobNav handleSearch={handleSearch} />
       </div>
     </div>
   )
