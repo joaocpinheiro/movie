@@ -2,23 +2,23 @@
 import Link from 'next/link'
 
 interface propTypes {
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+  setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>
   selectedGenre: string
   link: string
   text: string
 }
 
-export function MobSidebarLink({
+export const SidebarLink = ({
   setIsOpen,
   selectedGenre,
   link,
   text,
-}: propTypes) {
+}: propTypes) => {
   return (
     <Link
       className="w-fit"
       href={`/discover/${link}`}
-      onClick={() => setIsOpen(false)}
+      onClick={() => (setIsOpen !== undefined ? setIsOpen(false) : undefined)}
     >
       <p
         className={`sidebarLink ${selectedGenre === link ? 'sidebarActive' : ''}`}

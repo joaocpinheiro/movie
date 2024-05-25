@@ -6,13 +6,13 @@ import { useParams, useSearchParams } from 'next/navigation'
 import React, { FormEvent, useEffect, useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { IoMdClose } from 'react-icons/io'
-import { MobSidebarLink } from './mobSidebarLink'
+import { SidebarLink } from './sidebarLink'
 
 interface propsType {
-  handleSearch: (e: FormEvent<HTMLFormElement>) => void
+  handleSearch?: (e: FormEvent<HTMLFormElement>) => void
 }
 
-const title = [
+export const title = [
   {
     link: 'now_playing',
     text: 'Now Playing',
@@ -106,7 +106,7 @@ export const MobNav = ({ handleSearch }: propsType) => {
           <div className="flex flex-col gap-4 pt-4">
             <p className="sidebarTitle">Discover</p>
             {title.map((item, i) => (
-              <MobSidebarLink
+              <SidebarLink
                 key={i}
                 setIsOpen={setIsOpen}
                 selectedGenre={selectedGenre}
