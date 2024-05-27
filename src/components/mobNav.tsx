@@ -46,7 +46,6 @@ export const MobNav = ({ handleSearch }: propsType) => {
       if (data) {
         setGenres(data)
       }
-      console.log(data)
     }
     fetchGenres()
   }, [])
