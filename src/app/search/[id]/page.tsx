@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavBar } from '@/components/navBar'
 import { Sidebar } from '@/components/sidebar'
-import { MoviesContent } from '@/components/moviesContent'
+import { SearchContent } from '@/components/searchContent'
 
 const Discover = () => {
   return (
@@ -9,7 +9,7 @@ const Discover = () => {
       <NavBar />
       <div className="grid grid-cols-1 sm:grid-cols-[300px,1fr]">
         <Sidebar />
-        <MoviesContent />
+        <SearchContent />
       </div>
     </div>
   )

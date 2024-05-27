@@ -1,18 +1,17 @@
-import React from 'react'
+import { GenresContent } from '@/components/genresContent'
 import { NavBar } from '@/components/navBar'
 import { Sidebar } from '@/components/sidebar'
-import { MoviesContent } from '@/components/moviesContent'
 
-const Discover = () => {
+const Genres = () => {
   return (
     <div>
       <NavBar />
       <div className="grid grid-cols-1 sm:grid-cols-[300px,1fr]">
         <Sidebar />
-        <MoviesContent />
+        <GenresContent />
       </div>
     </div>
   )
 }
 
-export default Discover
+export default Genres

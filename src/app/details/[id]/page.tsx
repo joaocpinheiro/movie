@@ -1,18 +1,18 @@
-import React from 'react'
+import { MovieDetailsContent } from '@/components/movieDetailsContent'
 import { NavBar } from '@/components/navBar'
 import { Sidebar } from '@/components/sidebar'
-import { MoviesContent } from '@/components/moviesContent'
+import React from 'react'
 
-const Discover = () => {
+const MovieDetails = () => {
   return (
     <div>
       <NavBar />
       <div className="grid grid-cols-1 sm:grid-cols-[300px,1fr]">
         <Sidebar />
-        <MoviesContent />
+        <MovieDetailsContent />
       </div>
     </div>
   )
 }
 
-export default Discover
+export default MovieDetails
