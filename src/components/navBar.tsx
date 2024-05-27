@@ -35,7 +35,7 @@ export function NavBar() {
             Buscar
           </button>
         </form>
-        <MobNav handleSearch={handleSearch} />
+        <MobNav />
       </div>
     </div>
   )

@@ -13,7 +13,7 @@ export type PropGenres = {
 export async function getMovie(): Promise<PropGenres[] | undefined> {
   try {
     const response = await fetch(
-      `${BASE_URL}/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=pt-br`,
+      `${BASE_URL}/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en`,
     )
     const data = await response.json()
     console.log(data.genres)

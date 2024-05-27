@@ -3,14 +3,10 @@
 import { getMovie, PropGenres } from '@/app/api/get-movie'
 import Link from 'next/link'
 import { useParams, useSearchParams } from 'next/navigation'
-import React, { FormEvent, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { IoMdClose } from 'react-icons/io'
 import { SidebarLink } from './sidebarLink'
-
-interface propsType {
-  handleSearch?: (e: FormEvent<HTMLFormElement>) => void
-}
 
 export const title = [
   {
@@ -31,7 +27,7 @@ export const title = [
   },
 ]
 
-export const MobNav = ({ handleSearch }: propsType) => {
+export const MobNav = () => {
   const [IsOpen, setIsOpen] = useState(false)
   const [genres, setGenres] = useState<PropGenres[] | undefined>()
   const [selectedGenre, setSelectedGenre] = useState('')
